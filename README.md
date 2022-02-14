@@ -1,6 +1,6 @@
 # backend-provaomnios
 Prova omnios
 
-## npm start -> build + node ./dist/index.js
+## npm run start -> build + node ./dist/index.js
 
-## npm build -> build
+## npm run build -> build
