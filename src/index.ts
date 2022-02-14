@@ -48,7 +48,7 @@ const  generateAccessToken =  (username: string) => {
 }
 
 app.post('/login', (req, res) => {
-    // Insert Login Code Here
+    
     try {
         UserCollection.findOne({username: req.body.username, password: req.body.password}, (err: string, user: User) => {
             if (err) {
@@ -66,7 +66,7 @@ app.post('/login', (req, res) => {
   });
 
   app.post('/register', (req, res) => {
-    // Insert Login Code Here
+   
     console.log(req.body)
     try {
         UserCollection.findOne({username: req.body.username}, (err: string, user: User) => {
@@ -111,9 +111,9 @@ app.get('/list',authenticateToken, (req, res) => {
 });
 
 app.post('/upload', authenticateToken, upload.single('file'), async (req:any, res) => {
-   
+    //to-do bad request
     try {
-        
+        res.sendStatus(200);
     }
     catch (err) {
         console.log(err);
