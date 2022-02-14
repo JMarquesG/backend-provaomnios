@@ -21,7 +21,7 @@ mongoose.connect(mongoUrl)
     .then(() => console.log('Connected to MongoDB'))
 
 
-const upload = multer({ dest: 'pdf/' })
+const upload = multer({ dest: __dirname+ 'pdf/' })
 
 
 app.use(express.static(path.join(__dirname, 'public')));
@@ -113,7 +113,7 @@ app.get('/list',authenticateToken, (req, res) => {
 app.post('/upload', authenticateToken, upload.single('file'), async (req:any, res) => {
    
     try {
-        req.body
+        
     }
     catch (err) {
         console.log(err);
